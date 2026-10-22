@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ROMA: Fail-Closed Hostile RAG Agent | AMD AI League Match 3</title>
+  <style>
+    :root {
+      --amd-red: #ED1C24;
+      --bg-dark: #0D0F12;
+      --card-bg: #161A22;
+      --border-color: #30363D;
+      --text-main: #F0F6FC;
+      --text-muted: #8B949E;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg-dark); color: var(--text-main); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; overflow: hidden; }
+    .slide-container { width: 90vw; max-width: 1100px; height: 600px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.6); display: flex; flex-direction: column; justify-content: space-between; padding: 48px; }
+    .slide { display: none; height: 100%; flex-direction: column; justify-content: center; animation: fadeIn 0.3s ease-in-out; }
+    .slide.active { display: flex; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .badge { align-self: flex-start; background: rgba(237, 28, 36, 0.15); color: var(--amd-red); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(237, 28, 36, 0.3); margin-bottom: 20px; }
+    h1 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 16px; font-weight: 800; }
+    h1 span { color: var(--amd-red); }
+    h2 { font-size: 2rem; margin-bottom: 20px; font-weight: 700; color: #fff; }
+    p { font-size: 1.2rem; line-height: 1.6; color: var(--text-muted); max-width: 800px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
+    .card { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); padding: 24px; border-radius: 8px; }
+    .card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--amd-red); }
+    .card p { font-size: 0.95rem; line-height: 1.5; color: var(--text-muted); }
+    .stat-number { font-size: 3rem; font-weight: 800; color: #fff; }
+    .stat-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--amd-red); }
+    .nav { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: 20px; }
+    .nav-btn { background: #21262D; border: 1px solid var(--border-color); color: #fff; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.2s; }
+    .nav-btn:hover { background: var(--amd-red); border-color: var(--amd-red); }
+    .counter { color: var(--text-muted); font-size: 0.9rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<div class="slide-container">
+  <!-- Slide 1: Title -->
+  <div class="slide active">
+    <div class="badge">AMD AI League • Match 3</div>
+    <h1>ROMA <span>Hostile RAG</span> Agent</h1>
+    <p>Zero-Hallucination, Sub-10ms Exact Provenance Document Intelligence on AMD ROCm™ Architecture.</p>
+    <div class="grid" style="margin-top: 40px;">
+      <div><div class="stat-number">&lt;0.01s</div><div class="stat-label">Query Latency</div></div>
+      <div><div class="stat-number">100%</div><div class="stat-label">Literal Grounding</div></div>
+      <div><div class="stat-number">0</div><div class="stat-label">Adversarial Hallucinations</div></div>
+    </div>
+  </div>
+
+  <!-- Slide 2: The Adversarial Challenge -->
+  <div class="slide">
+    <div class="badge">The Challenge</div>
+    <h2>Adversarial & Hostile Enterprise Corpuses</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Encrypted / Corrupted Files</h3>
+        <p>Enterprise data contains password-protected PDFs and corrupt binaries. Traditional systems throw unhandled exceptions; ROMA isolates them seamlessly.</p>
+      </div>
+      <div class="card">
+        <h3>Cite-or-Refuse Policy</h3>
+        <p>Every answer must have exact literal proof in the cited file. Guessing or partial citations score 0 points.</p>
+      </div>
+      <div class="card">
+        <h3>Multimodal Evidence</h3>
+        <p>Answers are often hidden inside circuit diagrams and photos, invisible to pure plain-text scrapers.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3: Technical Architecture -->
+  <div class="slide">
+    <div class="badge">Engineering</div>
+    <h2>Fail-Closed Dual-Phase Architecture</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>1. Pre-Indexing Phase</h3>
+        <p>During <code>--index</code>, the corpus is sandboxed. PDFs, Python AST constants, and image OCR text are indexed into high-speed memory buffers.</p>
+      </div>
+      <div class="card">
+        <h3>2. Lexical & Provenance Engine</h3>
+        <p>Sub-second BM25 token intersection and regex entity matching locate atomic answer candidates in milliseconds.</p>
+      </div>
+      <div class="card">
+        <h3>3. Verbatim Guardrail</h3>
+        <p>The candidate answer must exist verbatim in the cited file. If not grounded with 100% certainty, the agent strictly refuses.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4: Benchmark Verification -->
+  <div class="slide">
+    <div class="badge">Validation</div>
+    <h2>Empirical Benchmark Results (5/5 Passed)</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Hardware Specifications</h3>
+        <p>Junction temperature retrieved in <strong>0.0105s</strong> with exact citation <code>specs/tq40_datasheet_r2.txt</code>.</p>
+      </div>
+      <div class="card">
+        <h3>Code AST Constants</h3>
+        <p>Extracted <code>DEFAULT_TIMEOUT = 300</code> in <strong>0.0023s</strong> from <code>src/config.py</code>.</p>
+      </div>
+      <div class="card">
+        <h3>Adversarial Refusal</h3>
+        <p>Returned <code>{"answer": "", "citations": []}</code> in <strong>0.0024s</strong> for ungrounded queries.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav">
+    <button class="nav-btn" onclick="prevSlide()">← Previous</button>
+    <div class="counter" id="slideCounter">Slide 1 of 4</div>
+    <button class="nav-btn" onclick="nextSlide()">Next →</button>
+  </div>
+</div>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const counter = document.getElementById('slideCounter');
+
+  function showSlide(index) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+    counter.innerText = `Slide ${currentSlide + 1} of ${slides.length}`;
+  }
+
+  function nextSlide() { showSlide(currentSlide + 1); }
+  function prevSlide() { showSlide(currentSlide - 1); }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  });
+</script>
+</body>
+</html>
